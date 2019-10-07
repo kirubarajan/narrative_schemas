@@ -1,0 +1,1 @@
+"""Script for managing the NYT section of the Gigaword Corpus"""
