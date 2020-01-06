@@ -1,6 +1,25 @@
 # Implementation
 A document highlighting the implementation of the project.
 
+## Format
+Chains are in the form of *verb/dependency*. An example of a narrative chain pertaining to Microsoft looks like:
+
+```
+1 worked work pp
+2 had have pp
+3 hired hire subj
+4 bringing bring subj
+5 has have subj
+6 hired hire subj
+7 acquired acquire subj
+8 taken take subj
+9 coming come pp
+10 has have subj
+
+--------------------------
+Microsoft actions
+```
+
 ## Event Slot Similarity with Arguments
 Scoring new event slot `f, g` against a chain of size `n` by summing over scores between all pairs.
 
