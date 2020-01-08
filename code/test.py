@@ -2,9 +2,16 @@
 import spacy
 import stanfordnlp
 from models import Event
+from data import DataLoader
 
+
+# data pre-processing
 EXAMPLE = "First, President Bush occupied Iraq. Then, Iraq was offered a deal by him" 
+loader = DataLoader("data/agiga/export.txt")
+text = loader.text()
+print(text)
 
+"""Dependency Parsing and Coreference Resolution using Stanford NLP Package"""
 def parse_stanford():
     nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,pos,lemma,depparse', lang='en')
     doc = nlp(EXAMPLE)
@@ -22,6 +29,7 @@ def parse_stanford():
 
     print(events)
 
+"""Dependency Parsing and Coreference Resolution using SpaCy Package"""
 def parse_spacy():
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(EXAMPLE)
