@@ -15,7 +15,7 @@ def joint_event_prob(event1, event2, events):
     count = 0
     for event in events:
         if event1.argument == event2.argument and event1.argument == event.argument:
-            count++
+            count += 1
     return count / sum([events[x] for x in events])
 
 """coreference probability (section 4)"""
@@ -23,7 +23,7 @@ def event_prob(event1, events):
     count = 0
     for event in events:
         if event1.argument == event.argument:
-            count++
+            count += 1
     return count / sum([events[x] for x in events])
 
 """pointwise mutual information approximation"""
