@@ -7,7 +7,11 @@ An implementation of (Chambers and Jurafsky, 2008), using updated libaries, clas
 
 The following libraries are used throughout the study:
 1. Stanford CoreNLP Python Implementation
-2. SpaCy Dependency Parser and Coreference Resolution
+2. SpaCy Dependency Parser and Coreference Resolution 
+
+Future work and extensions include:
+1. Word2Vec Google-News Word Embedding Model 
+2. PyMagnitude Embedding Format
 
 ## Data
 The algorithm is being tested on a subset of the New York Times section of the Gigaword Corpus using the `agiga` maven package.
