@@ -9,4 +9,4 @@ An implementation of (Chambers and Jurafsky, 2008), using updated libaries, clas
 The algorithm is being tested on a subset of the New York Times section of the Gigaword Corpus using the `agiga` maven package.
 
 ## Evaluation
-Evaluation is performed using the *narrative cloze* Evaluation Task. Implementation can be found in `code/evaluation.py`.
+Evaluation is performed using the *Narrative Cloze* Evaluation Task. Implementation can be found in `code/evaluation.py`.
