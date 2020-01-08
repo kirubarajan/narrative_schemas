@@ -25,7 +25,7 @@ class DataLoader:
     def __len__(self):
         return len(self.lines)
 
-def build_loader():
-    loader = DataLoader("data/agiga/export.txt")
+def build_loader(file_path):
+    loader = DataLoader(file_path)
     loader.clean_agiga_text()
     return loader
