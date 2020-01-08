@@ -5,6 +5,7 @@ class DataLoader:
         self.path = path
         with open(path) as f:
             self.text = f.read()  
+        self.get_lines
 
     """removes execution metatdata from plaintext"""
     def clean_agiga_text(self):
@@ -15,10 +16,14 @@ class DataLoader:
 
     def get_lines(self):
         lines = self.text.split("\n")
-        return lines
+        self.lines = lines
+        return self.lines
 
     def sanity_check(self):
         print(loader.get_text()[:200], loader.get_text()[-200:])
+
+    def __len__(self):
+        return len(self.lines)
 
 def build_loader():
     loader = DataLoader("data/agiga/export.txt")
