@@ -1,13 +1,13 @@
 import math
 
 class Event:
-    def __init__(self, verb, argument, subject=""):
+    def __init__(self, subject, verb, dependency):
         self.subject = subject
         self.verb = verb
-        self.argument = argument
+        self.argument = dependency
 
     def __str__(self):
-        return " ".join([self.subject, self.verb, self.argument])
+        return " ".join([self.verb, self.subject, self.argument])
 
 """joint coreference probability (section 4)"""
 # `events` is a frequency dictionary of type event -> integer 
