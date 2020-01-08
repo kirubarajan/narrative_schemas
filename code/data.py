@@ -17,6 +17,9 @@ class DataLoader:
         lines = self.text.split("\n")
         return lines
 
+    def sanity_check(self):
+        print(loader.get_text()[:200], loader.get_text()[-200:])
+
 def build_loader():
     loader = DataLoader("data/agiga/export.txt")
     loader.clean_agiga_text()
