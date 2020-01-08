@@ -7,7 +7,7 @@ class Event:
         self.argument = dependency
 
     def __str__(self):
-        return " ".join([self.verb, self.subject, self.argument])
+        return " ".join([self.subject, self.verb, self.argument])
 
     def __hash__(self):
         return hash(self.__str__())
@@ -33,7 +33,7 @@ def event_prob(event1, events):
     return count / sum([events[x] for x in events])
 
 """pointwise mutual information approximation"""
-def ppmi(event1, event2):
+def ppmi_approx(event1, event2):
     numerator = math.log(joint_event_prob(event1, event2, chains))
     denominator = math.log(event_prob(event1, events)) + math.log(event_prob(event2, events))
     return math.log(math.exp(joint_event_prob - math.exp(denominator)))
