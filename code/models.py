@@ -9,6 +9,12 @@ class Event:
     def __str__(self):
         return " ".join([self.verb, self.subject, self.argument])
 
+    def __hash__(self):
+        return hash(self.__str__())
+
+    def __eq__(self, other):
+        return self.__hash__() == other.__hash__()
+
 """joint coreference probability (section 4)"""
 # `events` is a frequency dictionary of type event -> integer 
 def joint_event_prob(event1, event2, events):
