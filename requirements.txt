@@ -18,7 +18,7 @@ neuralcoref==4.0
 numpy==1.18.1
 plac==0.9.6
 preshed==2.0.1
-protobuf==3.11.2
+protobuf==3.15.0
 pymagnitude==0.1.120
 python-dateutil==2.8.1
 requests==2.22.0
